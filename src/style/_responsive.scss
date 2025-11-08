@@ -1,0 +1,22 @@
+@use "./variables" as *;
+@use "sass:map";
+
+@mixin responsive-to($breakpoint) {
+  @if (map.get($breakpoints, $breakpoint)) {
+    @media (max-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "No value found for `#{$breakpoint}` in $breakpoints map.";
+  }
+}
+
+@mixin responsive-range($min, $max) {
+  @if (map.get($breakpoints, $min) and map.get($breakpoints, $max)) {
+    @media (min-width: map.get($breakpoints, $min)) and (max-width: map.get($breakpoints, $max)) {
+      @content;
+    }
+  } @else {
+    @warn "No value found for `#{$min}` or `#{$max}` in $breakpoints map.";
+  }
+}

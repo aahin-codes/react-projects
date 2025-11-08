@@ -1,0 +1,53 @@
+$light-theme: (
+  gray-light: #f5f5f5,
+  gray-dark: #cccccc,
+  gray-darkest: #999999,
+  coal: #ffffff,
+  charcoal: #eeeeee,
+  gray: #d9d9d9,
+  yellow: #ffcc33,
+  pink: #ff99aa,
+  green: #1abc9c,
+  purple: #9b59b6,
+  beige: #ffffff,
+  blue: #3498db,
+  orange: #e67e22,
+  red: #e74c3c,
+  white: #ffffff,
+  gentle-peach: #fbd1b7,
+  magestic-purple: #a78bfa,
+);
+
+$dark-theme: (
+  gray-light: #1b1d23,
+  gray-dark: #131519,
+  gray-darkest: #0d0f11,
+  gray: #262522,
+  coal: #0f0d0e,
+  charcoal: #231f20,
+  yellow: #fcba28,
+  pink: #f38ba3,
+  green: #0ba95b,
+  purple: #7b5ea7,
+  beige: #f9f4da,
+  blue: #12b5e5,
+  orange: #fc7428,
+  red: #ed203d,
+  white: #ffffff,
+  gentle-peach: #f99157,
+  magestic-purple: #9d7dce,
+);
+
+@mixin apply-theme($theme) {
+  @each $key, $value in $theme {
+    --#{"" + $key}: #{$value};
+  }
+}
+
+:root,
+[data-theme="light-mode"] {
+  @include apply-theme($light-theme);
+}
+[data-theme="dark-mode"] {
+  @include apply-theme($dark-theme);
+}

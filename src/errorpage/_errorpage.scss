@@ -1,0 +1,124 @@
+@use "../style/responsive" as *;
+
+.error-container {
+  background-color: var(--gray);
+  color: var(--beige);
+  padding: 20px;
+  min-height: 100vh;
+  user-select: none;
+
+  .error-wrapper-container {
+    background-color: var(--gray-darkest);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    padding: 50px;
+    min-height: calc(100vh - 40px);
+
+    .error-icon {
+      font-size: 100px;
+      fill: var(--orange);
+      align-self: center;
+      margin-bottom: 50px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 46px;
+      text-align: center;
+    }
+
+    p {
+      padding-top: 15px;
+      padding-bottom: 40px;
+      line-height: 24px;
+      text-align: center;
+      width: 80%;
+    }
+
+    .reasons {
+      h3 {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        li {
+          padding-left: 50px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          line-height: 20px;
+
+          &:first-child {
+            padding-top: 15px;
+
+            .icon {
+              fill: var(--blue);
+            }
+          }
+
+          &:nth-child(2) {
+            .icon {
+              fill: var(--green);
+            }
+          }
+
+          &:last-child {
+            .icon {
+              fill: var(--orange);
+            }
+          }
+        }
+      }
+    }
+
+    .home-link {
+      text-decoration: none;
+      margin-top: 40px;
+      color: inherit;
+      background-color: var(--gray);
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: var(--green);
+      }
+
+      &:active {
+        background-color: var(--blue);
+        transform: translateY(5px);
+      }
+    }
+  }
+}
+
+@include responsive-range(xxs, sm) {
+  .error-container {
+    .error-wrapper-container {
+      padding: 25px;
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .reasons {
+        ul {
+          li {
+            padding-left: 15px;
+            align-items: flex-start;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
