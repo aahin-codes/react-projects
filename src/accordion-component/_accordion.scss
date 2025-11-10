@@ -1,0 +1,297 @@
+@use "../style/responsive" as *;
+
+.accordion-comp {
+  padding: 20px;
+  background-color: var(--gray);
+  color: var(--beige);
+  min-height: 100vh;
+  user-select: none;
+
+  .accordion-comp-wrapper {
+    background-color: var(--gray-darkest);
+    padding: 40px 25px;
+    border-radius: 10px;
+
+    nav {
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 40px;
+        list-style: none;
+
+        li {
+          &:first-child {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            gap: 8px;
+            transition: all 0.3s ease;
+
+            a {
+              text-decoration: none;
+              color: inherit;
+              font-size: inherit;
+            }
+
+            &:hover {
+              color: var(--green);
+            }
+          }
+
+          &:last-child {
+            .github-icon {
+              height: 50px;
+              width: 50px;
+              fill: var(--white);
+              transition: fill 0.3s ease;
+
+              &:hover {
+                fill: var(--green);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .accordion-comp-content {
+    padding: 40px 25px;
+    border-radius: 8px;
+    background-color: var(--gray-light);
+    max-width: 700px;
+    margin: 0 auto;
+
+    .btn-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 30px;
+
+      button {
+        border: none;
+        background-color: var(--gray);
+        color: inherit;
+        padding: 10px;
+        transition: background-color 0.5s ease;
+
+        &:first-child {
+          padding-left: 15px;
+          border-bottom-left-radius: 10px;
+          border-top-left-radius: 10px;
+        }
+
+        &:last-child {
+          padding-right: 15px;
+          border-bottom-right-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+
+        &.active {
+          background-color: var(--green);
+        }
+      }
+    }
+
+    .content {
+      h2 {
+        color: var(--blue);
+        font-size: 22px;
+        font-weight: 700;
+        padding-bottom: 25px;
+        line-height: 30px;
+
+        & + p {
+          width: 90%;
+          line-height: 20px;
+        }
+      }
+
+      .sub-title {
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 1px;
+        padding: 20px 0px 5px;
+
+        & + p:not(.sub-title) {
+          text-indent: 25px;
+          line-height: 20px;
+        }
+      }
+
+      .demo-box {
+        background-color: var(--gray-darkest);
+        padding: 20px;
+        border-radius: 5px;
+
+        .accordion-list {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 15px;
+
+          .accordion-item {
+            padding: 10px;
+            background-color: var(--purple);
+            border-radius: 10px;
+
+            .title {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              .icon-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                padding-right: 5px;
+
+                .icon {
+                  position: absolute;
+                  transition: all 0.3s ease;
+
+                  &.hide {
+                    opacity: 0;
+                    visibility: hidden;
+                  }
+
+                  &.show {
+                    opacity: 1;
+                    visibility: visible;
+                  }
+                }
+              }
+            }
+
+            .description {
+              line-height: 20px;
+              font-size: 14px;
+              text-indent: 20px;
+              width: 95%;
+              height: 0px;
+              max-height: 200px;
+              overflow: hidden;
+              transition: all 0.3s ease;
+
+              &.show {
+                height: 70px;
+                padding-top: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive-range(xxs, sm) {
+  .accordion-comp {
+    .accordion-comp-wrapper {
+      .accordion-comp-content {
+        .btn-wrapper {
+          button {
+            font-size: 14px;
+          }
+        }
+        .content {
+          h2 {
+            font-size: 18px;
+            line-height: 22px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+
+          .demo-box {
+            padding: 0px;
+            background-color: transparent;
+
+            .accordion-list {
+              .accordion-item {
+                .title {
+                  h4 {
+                    font-size: 10px;
+                    max-width: 80%;
+                  }
+                  .icon-wrapper {
+                    .icon {
+                      font-size: 14px;
+                    }
+                  }
+                }
+
+                .description {
+                  font-size: 9px;
+                  line-height: 12px;
+
+                  &.show {
+                    overflow: auto;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include responsive-range(xsm, sm) {
+  .accordion-comp {
+    .accordion-comp-wrapper {
+      .accordion-comp-content {
+        .content {
+          .demo-box {
+            .accordion-list {
+              .accordion-item {
+                .description {
+                  &.show {
+                    overflow: auto;
+                    height: 50px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include responsive-range(sm, md) {
+  .accordion-comp {
+    .accordion-comp-wrapper {
+      .accordion-comp-content {
+        .content {
+          .demo-box {
+            .accordion-list {
+              .accordion-item {
+                .title {
+                  h4 {
+                    font-size: 14px;
+                    max-width: 80%;
+                  }
+                }
+
+                .description {
+                  font-size: 12px;
+                  line-height: 16px;
+
+                  &.show {
+                    height: 40px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
