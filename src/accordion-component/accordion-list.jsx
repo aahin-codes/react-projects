@@ -13,7 +13,7 @@ export default function AccordionList({ type = "single" }) {
     const newSelection = [...multiple];
     let check = newSelection.indexOf(id);
 
-    check === -1 ? newSelection.push(id) : newSelection.pop(id);
+    check === -1 ? newSelection.push(id) : newSelection.splice(check,1);
 
     setMultiple(newSelection);
   }
