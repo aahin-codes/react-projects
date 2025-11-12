@@ -8,9 +8,9 @@ const projects = [
   },
   {
     id: 2,
-    title: "Sample",
-    description: "This is a sample project description.",
-    path: "project/sample",
+    title: "Random Color Generator",
+    description: "Generate random colors instantly with a single click. Copy color codes easily and explore endless color combinations.",
+    path: "project/random-color-generator",
   },
   {
     id: 3,
