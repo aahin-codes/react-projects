@@ -94,6 +94,33 @@
         }
       }
 
+      .content {
+        h2 {
+          color: var(--blue);
+          font-size: 22px;
+          font-weight: 700;
+          padding-bottom: 25px;
+          line-height: 30px;
+
+          & + p {
+            width: 90%;
+            line-height: 20px;
+          }
+        }
+
+        .sub-title {
+          text-transform: uppercase;
+          font-weight: 900;
+          letter-spacing: 1px;
+          padding: 20px 0px 5px;
+
+          & + p:not(.sub-title) {
+            text-indent: 25px;
+            line-height: 20px;
+          }
+        }
+      }
+
       .demo-box {
         background-color: var(--gray-darkest);
         padding: 20px;
@@ -140,11 +167,37 @@
             font-size: 14px;
           }
         }
+
+        .content {
+          h2 {
+            font-size: 18px;
+            line-height: 22px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+
         .demo-box {
+          min-height: 250px;
+
           button {
             font-size: 14px;
             padding: 8px 10px;
           }
+        }
+      }
+    }
+  }
+}
+
+@include responsive-range(sm, md) {
+  .rendering-comp {
+    .rendering-comp-wrapper {
+      .rendering-comp-content {
+        .demo-box {
+          min-height: 350px;
         }
       }
     }
