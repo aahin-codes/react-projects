@@ -3,6 +3,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import './_random-color-generator.scss';
+import data from "./rcg-data";
 
 export default function RandomColorGenerator() {
 
@@ -61,10 +62,25 @@ export default function RandomColorGenerator() {
               RGB
             </button>
           </div>
-          <div className="demo-box" style={{ backgroundColor: color }}>
-            <p>{color}</p>
-            <button onClick={() => randomColor()}>Generate Color</button>
-          </div>
+          {data.map((item) => {
+            if (item.type === colorType) {
+              return (
+                <div className="content" key={item.type}>
+                  <h2>{item.title}</h2>
+                  <p>{item.shortDescription}</p>
+                  <p className="sub-title">Demo</p>
+                  <div className="demo-box" style={{ backgroundColor: color }}>
+                    <p>{color}</p>
+                    <button onClick={() => randomColor()}>Generate Color</button>
+                  </div>
+                  <p className="sub-title">Description</p>
+                  <p>{item.description}</p>
+                </div>
+              );
+            }
+            return null;
+          })}
+
         </div>
       </div>
     </div>
