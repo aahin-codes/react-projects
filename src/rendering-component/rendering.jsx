@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"; import { IoLogoGithub } from
-"react-icons/io"; import { FaArrowLeftLong } from "react-icons/fa6"; export
-default function Rendering({ data, activeType = null, buttons = null, demoBox })
+"react-icons/io"; import { FaArrowLeftLong } from "react-icons/fa6";
+import './_rendering.scss';
+export default function Rendering({ data, activeType = null, buttons = null, demoBox })
 { return (
 <div className="rendering-comp">
   <div className="rendering-comp-wrapper">
