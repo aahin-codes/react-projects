@@ -9,9 +9,11 @@ export default function Approutes() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="project/accordion" element={<Accordion/>} />
-       <Route path="project/random-color-generator" element={<RandomColorGenerator/>} />
-       <Route path="project/star-rating" element={<StarRatingComp/>} />
+      <Route path="project">
+        <Route path="accordion" element={<Accordion/>} />
+        <Route path="random-color-generator" element={<RandomColorGenerator/>} />
+        <Route path="star-rating" element={<StarRatingComp/>} />
+      </Route>
       <Route path="*" element={<ErrorPage />} />
     </Routes>
   )
