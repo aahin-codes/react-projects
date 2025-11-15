@@ -22,9 +22,23 @@ export default function Rendering({ data, activeType = null, buttons = null, dem
     <div className="rendering-comp-content">
       {buttons &&
       <div className="btn-wrapper">{buttons}</div>} {/* Data-driven content */}
-      {data.map((item) => { return( item.type === activeType && (<div
+      {data.map((item, index) => { return( 
+        
+        activeType!== null ? item.type === activeType && (<div
         className="content"
-        key="{item.type}"
+        key={item?.id || index+1}
+      >
+        <h2>{item.title}</h2>
+        <p>{item.shortDescription}</p>
+        <p className="sub-title">Demo</p>
+
+        {/* Custom demo section passed from parent */} {demoBox}
+
+        <p className="sub-title">Description</p>
+        <p>{item.description}</p>
+      </div>): (<div
+        className="content"
+        key={item?.id || index+1}
       >
         <h2>{item.title}</h2>
         <p>{item.shortDescription}</p>
