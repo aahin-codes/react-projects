@@ -14,9 +14,9 @@ const projects = [
   },
   {
     id: 3,
-    title: "Sample",
-    description: "This is a sample project description.",
-    path: "project/sample",
+    title: "Image Slider",
+    description: "A clean and responsive image slider that lets you navigate through images smoothly with intuitive controls.",
+    path: "project/image-slider",
   },
   {
     id: 4,
