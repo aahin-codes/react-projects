@@ -3,7 +3,7 @@ import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 import Rendering from "../rendering-component/rendering";
 import data from "./img-data";
 
-export default function ImgSliderComp({ url = "a", page = 1, limit = 5 }) {
+export default function ImgSliderComp({ url = "https://picsum.photos/v2/list?", page = 1, limit = 5 }) {
 
     const [images, setImages] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -59,7 +59,7 @@ export default function ImgSliderComp({ url = "a", page = 1, limit = 5 }) {
                     })}
                     </div>
                     <div className="circle-indicators">
-                        {(images && images.length) && images.map((_, ind) => <div key={ind} className={currentIndex === ind ? 'indicator active' : 'indicator unactive'}></div>)}
+                        {(images && images.length) && images.map((_, ind) => <div key={ind} className={currentIndex === ind ? 'indicator active' : 'indicator unactive'} onClick={()=>{setCurrentIndex(ind)}}></div>)}
                     </div>
                 </div>
             </div>
