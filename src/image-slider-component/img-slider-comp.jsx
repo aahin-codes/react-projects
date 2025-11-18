@@ -35,15 +35,12 @@ export default function ImgSliderComp({ url = "a", page = 1, limit = 5 }) {
         }
     }, [url])
 
-    console.log(images);
-
     function handlePrevious() {
         setCurrentIndex(currentIndex => currentIndex === 0 ? images.length - 1 : currentIndex - 1)
     }
     function handleNext() {
         setCurrentIndex(currentIndex => currentIndex === images.length - 1 ? 0 : currentIndex + 1)
     }
-    console.log(currentIndex);
 
 
 
@@ -54,11 +51,13 @@ export default function ImgSliderComp({ url = "a", page = 1, limit = 5 }) {
                 <div className="img-container" >
                     <BsArrowLeftCircleFill className="icon-prev icon" onClick={() => handlePrevious()} />
                     <BsArrowRightCircleFill className="icon-next icon" onClick={() => handleNext()} />
-                    {images.map((image, index) => {
+                    <div className="img-wrapper">
+                        {images.map((image, index) => {
                         return (
                             <img key={image.id} src={image.download_url} alt={image.download_url} className={currentIndex === index ? "current-image active" : "current-image unactive"} />
                         )
                     })}
+                    </div>
                     <div className="circle-indicators">
                         {(images && images.length) && images.map((_, ind) => <div key={ind} className={currentIndex === ind ? 'indicator active' : 'indicator unactive'}></div>)}
                     </div>
