@@ -20,9 +20,9 @@ const projects = [
   },
   {
     id: 4,
-    title: "Sample",
-    description: "This is a sample project description.",
-    path: "project/sample",
+    title: "Load More Component ",
+    description: "A dynamic content loading component that reveals additional items on demand. It improves performance by loading data in small batches and enhances user experience with smooth loading states and seamless pagination.",
+    path: "project/load-more",
   },
   {
     id: 5,
