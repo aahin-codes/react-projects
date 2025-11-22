@@ -255,6 +255,34 @@
           }
         }
 
+        &.tree-view-comp {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 200px;
+
+          .menu-list-container {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            &:not(:first-child){
+              padding-left: 20px;
+              margin-top: 15px;
+            }
+
+            .menu-item {
+              span {
+                padding-left: 5px;
+                cursor: pointer;
+              }
+
+            }
+          }
+
+        }
+
         button {
           font-weight: 600;
           border: none;
@@ -325,6 +353,7 @@
 
             .products {
               flex-direction: column;
+
               .product {
                 flex: 1 0 100%;
                 min-height: 250px;
@@ -336,6 +365,8 @@
               margin-top: 30px;
             }
           }
+
+
 
           button {
             font-size: 14px;
