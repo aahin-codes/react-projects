@@ -6,6 +6,7 @@ import RandomColorGenerator from "../random-color-generator-component/random-col
 import StarRatingComp from "../star-rating-component/star-rating-comp";
 import ImgSliderComp from "../image-slider-component/img-slider-comp";
 import LoadMoreComponent from "../load-more-component/load-more-component";
+import TreeviewComp from "../tree-view-component/treeview-comp";
 
 export default function Approutes() {
   return (
@@ -17,6 +18,7 @@ export default function Approutes() {
         <Route path="star-rating" element={<StarRatingComp/>} />
         <Route path="image-slider" element={<ImgSliderComp/>} />
         <Route path="load-more" element={<LoadMoreComponent/>} />
+        <Route path="tree-view" element={<TreeviewComp/>} />
       </Route>
       <Route path="*" element={<ErrorPage />} />
     </Routes>
