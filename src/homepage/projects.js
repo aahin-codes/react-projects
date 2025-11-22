@@ -26,9 +26,9 @@ const projects = [
   },
   {
     id: 5,
-    title: "Sample",
-    description: "This is a sample project description.",
-    path: "project/sample",
+    title: "Tree View Component",
+    description: "A collapsible hierarchical component for displaying nested data, allowing users to expand and collapse nodes for easy navigation of multi-level structures.",
+    path: "project/tree-view",
   },
   {
     id: 6,
