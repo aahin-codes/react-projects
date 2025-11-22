@@ -1,5 +1,5 @@
 {
-  "homepage" : "https://aahin-codes.github.io/react-projects",
+  "homepage": "https://aahin-codes.github.io/react-projects",
   "name": "react-projects",
   "version": "0.1.0",
   "private": true,
@@ -11,6 +11,7 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-icons": "^5.5.0",
+    "react-qr-code": "^2.0.18",
     "react-router-dom": "^7.9.5",
     "react-scripts": "5.0.1",
     "sass": "^1.93.3",
@@ -19,8 +20,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build -r https://github.com/aahin-codes/react-projects.git",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -r https://github.com/aahin-codes/react-projects.git",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
