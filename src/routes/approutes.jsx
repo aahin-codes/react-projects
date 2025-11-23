@@ -7,6 +7,7 @@ import StarRatingComp from "../star-rating-component/star-rating-comp";
 import ImgSliderComp from "../image-slider-component/img-slider-comp";
 import LoadMoreComponent from "../load-more-component/load-more-component";
 import TreeviewComp from "../tree-view-component/treeview-comp";
+import QrCodeGenerator from "../qr-code-generator/qr-code-generator";
 
 export default function Approutes() {
   return (
@@ -19,6 +20,7 @@ export default function Approutes() {
         <Route path="image-slider" element={<ImgSliderComp/>} />
         <Route path="load-more" element={<LoadMoreComponent/>} />
         <Route path="tree-view" element={<TreeviewComp/>} />
+        <Route path="qr-code" element={<QrCodeGenerator/>} />
       </Route>
       <Route path="*" element={<ErrorPage />} />
     </Routes>
