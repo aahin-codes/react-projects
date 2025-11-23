@@ -32,9 +32,9 @@ const projects = [
   },
   {
     id: 6,
-    title: "Sample",
-    description: "This is a sample project description.",
-    path: "project/sample",
+    title: "QR Code Generator",
+    description: "A simple and intuitive tool for creating customizable QR codes from text, URLs, or other data. Supports instant preview and easy downloading, making it ideal for sharing information quickly and efficiently.",
+    path: "project/qr-code",
   },
   {
     id: 7,
