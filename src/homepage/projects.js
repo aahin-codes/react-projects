@@ -50,9 +50,9 @@ const projects = [
   },
   {
     id: 9,
-    title: "Sample",
-    description: "This is a sample project description.",
-    path: "project/sample",
+    title: "Custom Tabs",
+    description: "A tab-based navigation component that lets users switch between different sections of content in a clean and organized layout.",
+    path: "project/tabs",
   },
   {
     id: 10,

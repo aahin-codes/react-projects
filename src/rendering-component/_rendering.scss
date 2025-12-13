@@ -365,6 +365,37 @@
             gap: 15px;
           }
         }
+
+        &.tabs-container {
+          .tabs-wrapper {
+            border: 1px solid var(--beige);
+            border-radius: 5px;
+            overflow: hidden;
+
+            .heading {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: flex-start;
+              justify-content: flex-start;
+              text-align: center;
+              background-color: var(--green);
+
+              div {
+                flex: 1 0 100px;
+                padding: 10px 18px;
+                background-color: var(--green);
+                &.active{
+                  background-color: var(--gray-darkest);
+                }
+              }
+            }
+
+            .content {
+              padding: 10px;
+              min-height: 200px;
+            }
+          }
+        }
       }
 
       .indicator-wrapper {
