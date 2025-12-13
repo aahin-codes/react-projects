@@ -43,10 +43,10 @@ const projects = [
     path: "project/theme-mode",
   },
   {
-    id: 8,
-    title: "Sample",
-    description: "This is a sample project description.",
-    path: "project/sample",
+    id: 9,
+  title: "Scroll Indicator",
+  description: "A visual progress indicator that shows how much of a scrollable container or page has been viewed, improving navigation and user experience.",
+  path: "project/scroll-indicator",
   },
   {
     id: 9,
