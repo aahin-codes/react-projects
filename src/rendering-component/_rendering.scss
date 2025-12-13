@@ -306,7 +306,8 @@
               font-size: 13px;
               max-width: 250px;
               width: 100%;
-              &.error{
+
+              &.error {
                 border: 3px solid var(--red);
               }
             }
@@ -314,13 +315,24 @@
 
           .qr-code-container {
             background-color: var(--beige);
-           
+
             #qr-code-val {
-               padding: 30px;
+              padding: 30px;
               max-width: 500px;
               width: 100%;
             }
           }
+        }
+
+        &.theme-mode {
+          --bg-color: #ffffff;
+          background-color: var(--bg-color);
+
+          &#dark {
+            --bg-color: #5c5d5c;
+            background-color: var(--bg-color);
+          }
+
         }
 
         button {
@@ -418,9 +430,9 @@
             }
 
             .qr-code-container {
-             
+
               #qr-code-val {
-                 padding: 5px;
+                padding: 5px;
                 max-height: 150px;
                 height: 100%;
                 max-width: 150px;
