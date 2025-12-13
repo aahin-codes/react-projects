@@ -56,9 +56,9 @@ const projects = [
   },
   {
     id: 10,
-    title: "Sample",
-    description: "This is a sample project description.",
-    path: "project/sample",
+    title: "Modal Popup",
+    description: "A reusable modal dialog component for displaying content, alerts, or actions without leaving the current page.",
+    path: "project/modal-popup"
   },
   {
     id: 11,

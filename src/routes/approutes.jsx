@@ -11,6 +11,7 @@ import QrCodeGenerator from "../qr-code-generator/qr-code-generator";
 import Theme from "../light-and-dark-mode/theme";
 import ScrollIndicator from "../scroll-indicator/scroll-indicator";
 import Tabs from "../custom-tabs/tabs";
+import Modal from "../modal-popup/modal";
 
 export default function Approutes() {
   return (
@@ -27,6 +28,7 @@ export default function Approutes() {
         <Route path="theme-mode" element={<Theme/>} />
         <Route path="scroll-indicator" element={<ScrollIndicator/>} />
         <Route path="tabs" element={<Tabs/>} />
+        <Route path="modal-popup" element={<Modal/>} />
       </Route>
       <Route path="*" element={<ErrorPage />} />
     </Routes>
