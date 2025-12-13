@@ -8,6 +8,7 @@ import ImgSliderComp from "../image-slider-component/img-slider-comp";
 import LoadMoreComponent from "../load-more-component/load-more-component";
 import TreeviewComp from "../tree-view-component/treeview-comp";
 import QrCodeGenerator from "../qr-code-generator/qr-code-generator";
+import Theme from "../light-and-dark-mode/theme";
 
 export default function Approutes() {
   return (
@@ -21,6 +22,7 @@ export default function Approutes() {
         <Route path="load-more" element={<LoadMoreComponent/>} />
         <Route path="tree-view" element={<TreeviewComp/>} />
         <Route path="qr-code" element={<QrCodeGenerator/>} />
+        <Route path="theme-mode" element={<Theme/>} />
       </Route>
       <Route path="*" element={<ErrorPage />} />
     </Routes>
