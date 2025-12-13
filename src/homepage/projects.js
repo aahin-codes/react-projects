@@ -38,9 +38,9 @@ const projects = [
   },
   {
     id: 7,
-    title: "Sample",
-    description: "This is a sample project description.",
-    path: "project/sample",
+    title: "Light & Dark Mode Toggle",
+    description: "A simple toggle to switch between light and dark themes for a better viewing experience.",
+    path: "project/theme-mode",
   },
   {
     id: 8,
