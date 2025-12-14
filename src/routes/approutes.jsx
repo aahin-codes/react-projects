@@ -12,6 +12,7 @@ import Theme from "../light-and-dark-mode/theme";
 import ScrollIndicator from "../scroll-indicator/scroll-indicator";
 import Tabs from "../custom-tabs/tabs";
 import Modal from "../modal-popup/modal";
+import GithubProfileFinder from "../github-profile-finder/github-profile-finder";
 
 export default function Approutes() {
   return (
@@ -29,6 +30,7 @@ export default function Approutes() {
         <Route path="scroll-indicator" element={<ScrollIndicator/>} />
         <Route path="tabs" element={<Tabs/>} />
         <Route path="modal-popup" element={<Modal/>} />
+        <Route path="github-profile-finder" element={<GithubProfileFinder/>} />
       </Route>
       <Route path="*" element={<ErrorPage />} />
     </Routes>

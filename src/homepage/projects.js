@@ -61,11 +61,11 @@ const projects = [
     path: "project/modal-popup"
   },
   {
-    id: 11,
-    title: "Sample",
-    description: "This is a sample project description.",
-    path: "project/sample",
-  },
+  id: 11,
+  title: "GitHub Profile Finder",
+  description: "Search and view GitHub user profiles by username with key account details.",
+  path: "project/github-profile-finder",
+},
   {
     id: 12,
     title: "Sample",
