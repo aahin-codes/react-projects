@@ -73,11 +73,12 @@ const projects = [
   path: "project/search-autocomplete",
 },
   {
-    id: 13,
-    title: "Sample",
-    description: "This is a sample project description.",
-    path: "project/sample",
-  },
+  id: 13,
+  title: "Tic Tac Toe",
+  description:
+    "A classic two-player Tic Tac Toe game built with interactive UI logic. Players take turns placing X and O on a 3×3 grid, with real-time win detection, draw handling, and reset functionality. The project demonstrates core concepts such as state management, conditional rendering, and user interaction in a clean and intuitive interface.",
+  path: "project/tic-tac-toe",
+},
   {
     id: 14,
     title: "Sample",

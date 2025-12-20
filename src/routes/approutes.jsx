@@ -14,6 +14,7 @@ import Tabs from "../custom-tabs/tabs";
 import Modal from "../modal-popup/modal";
 import GithubProfileFinder from "../github-profile-finder/github-profile-finder";
 import SearchAutocomplete from "../search-autocomplete/search-autocomplete";
+import Game from "../tic-tac-toe/game";
 
 export default function Approutes() {
   return (
@@ -33,6 +34,7 @@ export default function Approutes() {
         <Route path="modal-popup" element={<Modal/>} />
         <Route path="github-profile-finder" element={<GithubProfileFinder/>} />
         <Route path="search-autocomplete" element={<SearchAutocomplete/>} />
+        <Route path="tic-tac-toe" element={<Game/>} />
       </Route>
       <Route path="*" element={<ErrorPage />} />
     </Routes>
