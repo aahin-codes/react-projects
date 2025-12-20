@@ -13,6 +13,7 @@ import ScrollIndicator from "../scroll-indicator/scroll-indicator";
 import Tabs from "../custom-tabs/tabs";
 import Modal from "../modal-popup/modal";
 import GithubProfileFinder from "../github-profile-finder/github-profile-finder";
+import SearchAutocomplete from "../search-autocomplete/search-autocomplete";
 
 export default function Approutes() {
   return (
@@ -31,6 +32,7 @@ export default function Approutes() {
         <Route path="tabs" element={<Tabs/>} />
         <Route path="modal-popup" element={<Modal/>} />
         <Route path="github-profile-finder" element={<GithubProfileFinder/>} />
+        <Route path="search-autocomplete" element={<SearchAutocomplete/>} />
       </Route>
       <Route path="*" element={<ErrorPage />} />
     </Routes>

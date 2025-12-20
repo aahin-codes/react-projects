@@ -67,11 +67,11 @@ const projects = [
   path: "project/github-profile-finder",
 },
   {
-    id: 12,
-    title: "Sample",
-    description: "This is a sample project description.",
-    path: "project/sample",
-  },
+  id: 12,
+  title: "Search Autocomplete",
+  description: "A smart search input that displays relevant suggestions as users type.",
+  path: "project/search-autocomplete",
+},
   {
     id: 13,
     title: "Sample",
