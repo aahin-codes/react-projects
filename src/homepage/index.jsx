@@ -10,18 +10,14 @@ import projects from './projects';
 export default function HomePage() {
 
   const [hovered, setHovered] = useState(false);
-
   useEffect(() => {
-
   }, []);
   return (
     <div className="m-container">
       <div className="m-container-wrapper">
         <nav>
           <ul>
-            <li onMouseEnter={()=> setHovered(true)} onMouseLeave={()=> setHovered(false)} className={hovered ? 'active':'unactive'}>{hovered  ? 'AahinMehreen': 'AM'}</li>
-            {console.log(hovered)
-            }
+            <li onMouseOver={()=> setHovered(true)} onMouseOut={()=> setHovered(false)} className={hovered ? 'active':'unactive'}>{hovered  ? 'AahinMehreen': 'AM'}</li>
             <li><IoLogoGithub className='github-icon' /></li>
           </ul>
         </nav>
@@ -43,7 +39,7 @@ export default function HomePage() {
           <h2>React Js</h2>
           <p>by AahinMehreen Developer</p>
           <div className="info-container">
-
+            
           </div>
         </div>
       </div>

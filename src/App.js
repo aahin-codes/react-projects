@@ -1,12 +1,11 @@
+import { RouterProvider } from "react-router-dom";
 import "./App.css";
-import Approutes from "./routes/approutes.jsx";
-import { BrowserRouter } from "react-router-dom";
+import router from "./routes/Router";
+
 function App() {
   return (
     <>
-      <BrowserRouter basename="/react-projects">
-        <Approutes />
-      </BrowserRouter>
+      <RouterProvider router={router}/>
     </>
   );
 }

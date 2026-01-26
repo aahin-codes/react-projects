@@ -1,0 +1,14 @@
+ .theme-mode {
+
+     &.light {
+         --bg-color: #ffffff;
+         background-color: var(--bg-color);
+     }
+
+
+     &.dark {
+         --bg-color: #5c5d5c;
+         background-color: var(--bg-color);
+     }
+
+ }
