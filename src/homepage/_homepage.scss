@@ -151,6 +151,7 @@
           font-size: 14px;
           line-height: 20px;
           display: -webkit-box;
+          line-clamp: 3;
           -webkit-line-clamp: 5;
           -webkit-box-orient: vertical;
           overflow: hidden;
@@ -173,9 +174,9 @@
               fill: var(--white);
             }
 
-            &:active {
-              // transform: translateX(20px);
-            }
+            // &:active {
+            //   // transform: translateX(20px);
+            // }
           }
         }
       }
