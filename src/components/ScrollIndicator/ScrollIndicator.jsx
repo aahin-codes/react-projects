@@ -29,7 +29,7 @@ export default function ScrollIndicator({ url = 'https://dummyjson.com/products?
 
     useEffect(() => {
         const el = document.querySelector('.scroll-indicator');
-        if(!el) return;
+        if (!el) return;
         function handleScroll() {
             // console.log(document.body.scrollTop, document.documentElement.scrollTop, document.documentElement.scrollHeight, document.documentElement.clientHeight);
             const howMuchScrolled = el.scrollTop;
@@ -46,26 +46,27 @@ export default function ScrollIndicator({ url = 'https://dummyjson.com/products?
 
 
     const renderingContent = (
-            <>
+        <>
             <div className="indicator-wrapper">
-                    <div className="indicator" style={{width:`${Math.round(scrollPercentage)}%`}}></div>
-                </div>
+                <div className="indicator" style={{ width: `${Math.round(scrollPercentage)}%` }}></div>
+            </div>
             <div className='scroll-indicator'>
-                
+
                 <div className="content">
-                    {products.map((product, index) => {
-                    return <p key={index}>{product.title}</p>
-                })}
+                    <ul>
+                        {products.map((product, index) => {
+                            return <li key={index}>{product.title}</li>
+                        })}
+                    </ul>
                 </div>
             </div>
-            </>
-        )
+        </>
+    )
+
+   const loadingContent = <div className='loading'>Loading...</div>;
     
-    if (loading) {
-        return <div>Loading</div>
-    }
 
     return (
-        <Rendering data={datas} renderingComponent={renderingContent}/>
+        <Rendering data={datas} renderingComponent={loading?loadingContent:renderingContent} />
     )
 }

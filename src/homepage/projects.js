@@ -68,7 +68,7 @@ const projects = [
     id: 11,
     title: "Load More Data",
     description: "Fetch data in small chunks to boost performance. Includes a button to progressively reveal more content.",
-    path: "project/load-more",
+    path: "project/load-more-component",
   },
   {
     id: 12,

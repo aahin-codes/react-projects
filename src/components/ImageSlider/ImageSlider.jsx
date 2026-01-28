@@ -44,7 +44,7 @@ export default function ImageSlider({ url = "https://picsum.photos/v2/list?", pa
     }
 
 
-
+    const loadingContent = (<div className='loading'>Loading....</div>);
 
     const renderingContent = (
         <>
@@ -66,6 +66,6 @@ export default function ImageSlider({ url = "https://picsum.photos/v2/list?", pa
     )
 
     return (
-        <Rendering data={data} renderingComponent={renderingContent} className={"image-slider"} />
+        <Rendering data={data} renderingComponent={loading ? loadingContent : renderingContent} className={"image-slider"} />
     )
 }

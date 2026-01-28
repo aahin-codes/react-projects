@@ -1,5 +1,5 @@
-
-import data from './game-data'
+import './_ticTacToe.scss';
+import data from './game-data';
 import Rendering from '../RenderingComponent/Rendering'
 import { useEffect, useState } from 'react'
 
@@ -65,7 +65,7 @@ export default function TicTacToe() {
                     <Square value={square[8]} handleClick={() => handleClick(8)} />
                 </div>
             </div>
-            <p>{status}</p>
+            <p>{status.slice(0,-1)} <span>{status.slice(-1)}</span></p>
             <button onClick={handleRestart}>Restart</button>
 
         </div>

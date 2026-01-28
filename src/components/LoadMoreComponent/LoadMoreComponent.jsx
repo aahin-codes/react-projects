@@ -12,7 +12,7 @@ export default function LoadMoreComponent({ url = 'https://dummyjson.com/product
 
     const fetchProducts = useCallback( async (getUrl)=> {
         try {
-            setLoading(true)
+            if(count === 0) setLoading(true);
             const response = await fetch(`${getUrl}${count === 0 ? count : count * 20}`);
             const jsonData = await response.json();
 
@@ -29,6 +29,7 @@ export default function LoadMoreComponent({ url = 'https://dummyjson.com/product
     function LoadMore() {
         setCount(prevCount => prevCount + 1);
     }
+    const loadingContent = (<div className='loading'>Loading...</div>)
     const renderingContent =(
             <>
                 <div className="products">
@@ -52,6 +53,6 @@ export default function LoadMoreComponent({ url = 'https://dummyjson.com/product
     }, [url, fetchProducts])
 
     return (
-        <Rendering data={data} renderingComponent={renderingContent} className={"load-more-container"} />
+        <Rendering data={data} renderingComponent={loading?loadingContent:renderingContent} className={"load-more-container"} />
     )
 }

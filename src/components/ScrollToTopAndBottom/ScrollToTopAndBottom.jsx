@@ -1,3 +1,4 @@
+import "./_scroll.scss";
 import datas from "./scroll-to-top-and-bottom";
 import Rendering from "../RenderingComponent/Rendering";
 import { useRef } from "react";
@@ -13,13 +14,10 @@ export default function ScrollToTopAndBottom() {
 
 
     const bottomRef = useRef();
+    const topRef = useRef();
 
     function handleScrollToTop() {
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        })
+        topRef.current.scrollIntoView({ behavior: "smooth" })
     }
 
     function handleScrollToBottom() {
@@ -31,7 +29,7 @@ export default function ScrollToTopAndBottom() {
         <>
 
             <h2>Scroll Top to Bottom</h2>
-            <button onClick={handleScrollToBottom}>Scroll to bottom</button>
+            <button ref={topRef} onClick={handleScrollToBottom}>Scroll to bottom</button>
             <ul>
                 {data && data.products && data.products.length ? data.products.map((item, ind) => <li key={ind}>{item.title}</li>) : null}
             </ul>
@@ -41,5 +39,5 @@ export default function ScrollToTopAndBottom() {
     )
 
     return (
-        <Rendering data={datas} renderingComponent={renderingContent} />)
+        <Rendering data={datas} renderingComponent={renderingContent} className={'scroll'}/>)
 }

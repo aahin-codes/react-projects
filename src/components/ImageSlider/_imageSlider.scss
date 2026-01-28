@@ -1,3 +1,5 @@
+@use "../../style/responsive" as *;
+
 .image-slider {
     display: flex;
     flex-direction: column;
@@ -70,6 +72,31 @@
 
 
             }
+        }
+    }
+}
+
+@include responsive-range(xxs, xsm) {
+    .image-slider {
+
+        .icon {
+
+            &.icon-prev {
+                top: 150px;
+                left: 0px;
+
+            }
+
+            &.icon-next {
+                top: 150px;
+                right: 0px;
+            }
+        }
+
+        .circle-indicators {
+            margin-top: 5px;
+
+
         }
     }
 }
