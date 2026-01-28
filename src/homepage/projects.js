@@ -42,7 +42,7 @@ const projects = [
     id: 7,
     title: "QR Code Generator",
     description: "Turn any link or text into a scannable QR code instantly. Download and share your codes with ease.",
-    path: "project/qr-code",
+    path: "project/qr-code-generator",
   },
   {
     id: 8,

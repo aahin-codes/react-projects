@@ -1,3 +1,5 @@
+@use "../../style/responsive" as *;
+
 .modal-container {
     display: flex;
     justify-content: center;
@@ -6,25 +8,24 @@
 
     .modal {
         position: absolute;
-        height: 100vh;
-        width: 100%;
-        top: 0px;
-        left: 0px;
+        max-height: 100%;
+        max-width: 100%;
         background-color: rgba($color: #000000, $alpha: 0.6);
         color: var(--white);
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 9999;
+        overflow: hidden;
 
         .content {
             position: relative;
             background-color: var(--gray-light);
             color: var(--beige);
-            min-height: 250px;
-            min-width: 300px;
+            max-height: 350px;
+            max-width: 350px;
             border-radius: 5px;
-            padding: 15px;
+            padding: 20px;
             overflow: auto;
             display: flex;
             flex-direction: column;
@@ -34,6 +35,7 @@
             .header {
                 display: flex;
                 align-items: flex-start;
+                width: 100%;
 
                 span {
                     position: absolute;
@@ -48,18 +50,60 @@
                     color: var(--beige);
                 }
             }
-            .body{
-                p{
+
+            .body {
+                width: 100%;
+
+                p {
                     line-height: 1.6;
                     padding-top: 10px;
                     padding-bottom: 10px;
                 }
-                ul{
+
+                ul {
                     padding-left: 20px;
-                    li{
+
+                    li {
                         line-height: 1.6;
                     }
                 }
+            }
+
+            .footer {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include responsive-range(xxs, md) {
+    .modal-container {
+
+        .modal {
+
+            .content {
+                max-height: 250px;
+                max-width: 320px;
+                width: 100%;
+
+                .header {
+                    display: flex;
+                    align-items: flex-start;
+                    width: 100%;
+
+                    span {
+                        top: 2px;
+                        right: 5px;
+                        font-size: 20px;
+                    }
+
+                    h2 {
+                        font-size: 14px;
+                        color: var(--beige);
+                    }
+                }
+
+
             }
         }
     }

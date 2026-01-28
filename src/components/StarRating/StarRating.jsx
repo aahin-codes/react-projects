@@ -23,7 +23,7 @@ export default function StarRating({ numOfStars = 7 }) {
                             onClick={() => { setRating(stars) }}
                             onMouseMove={() => handleMouseMove(stars)}
                             onMouseLeave={() => { handleMouseLeave() }}
-                            className={stars <= (hover || rating) ? 'active' : 'inactive'}
+                            className={stars <= (hover || rating) ? 'active stars' : 'inactive stars'}
                         />)
                     })
                 }

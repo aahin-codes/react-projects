@@ -1,14 +1,26 @@
- .theme-mode {
+ .demo-box.theme-mode {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 
      &.light {
          --bg-color: #ffffff;
-         background-color: var(--bg-color);
+         --text-color: #000;
+         color: var(--text-color) !important;
+         background-color: var(--bg-color) !important;
+
+         button{
+            background-color: var(--text-color) !important;
+            color: var(--bg-color) !important;
+         }
      }
 
 
      &.dark {
          --bg-color: #5c5d5c;
-         background-color: var(--bg-color);
+         background-color: var(--bg-color) !important;
      }
 
  }

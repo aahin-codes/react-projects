@@ -1,9 +1,14 @@
 
-export default function ModalCard({ id, header, body, footer, modalPopup }) {
+export default function ModalCard({ id, header, body, footer, modalPopup, responsive }) {
+
     return (
         <div id={id || 'modal'} className="modal">
             <div className="modal-wrapper">
-                <div className="content">
+                {responsive && responsive.innerWidth && responsive.innerWidth < 719 ? (<div className="content">
+                    <div className="header">
+                        <span className="close-modal" onClick={modalPopup}>&times;</span>
+                        <h2>{header ? header : 'Modal Popup'}</h2>
+                    </div></div>): (<div className="content">
                     <div className="header">
                         <span className="close-modal" onClick={modalPopup}>&times;</span>
                         <h2>{header ? header : 'Reusable Modal Component'}</h2>
@@ -23,7 +28,7 @@ export default function ModalCard({ id, header, body, footer, modalPopup }) {
                     <div className="footer">
                         <div>{footer ? footer : <button onClick={modalPopup}>Close Modal</button>}</div>
                     </div>
-                </div>
+                </div>)}
             </div>
         </div>
     )
