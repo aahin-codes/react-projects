@@ -1,3 +1,4 @@
+import './_searchAutocomplete.scss';
 import Rendering from "../RenderingComponent/Rendering";
 import data from "./search-data";
 import { useEffect, useState } from "react";

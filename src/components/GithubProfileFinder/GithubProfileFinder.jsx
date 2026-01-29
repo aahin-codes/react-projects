@@ -8,6 +8,7 @@ export default function GithubProfileFinder() {
     const [userName, setuserName] = useState('aahin-codes');
     const [userData, setUserData] = useState(null);
     const [loading, setLoading] = useState(false)
+    const [errorMsg, setErrorMsg] = useState(null);
 
     function handleSearch() {
         if (!userName.trim()) {
@@ -28,28 +29,33 @@ export default function GithubProfileFinder() {
                 setuserName('');
             }
         } catch (e) {
+            setLoading(false);
+            setErrorMsg("Error in fetching....")
         }
 
     }
 
     const renderingContent = (
-            <>
-                <div className="input-wrapper">
-                    <input name="search" type="text" placeholder="Search Github username..." value={userName} onChange={(e) => setuserName(e.target.value)} />
-                    <button onClick={(e) => { handleSearch() }}>Search</button>
-                </div>
+        <>
+            <div className="input-wrapper">
+                <input name="search" type="text" placeholder="Search Github username..." value={userName} onChange={(e) => setuserName(e.target.value)} />
+                <button onClick={(e) => { handleSearch() }}>Search</button>
+            </div>
 
-                <div className="profile">
-                    {userData !== null ? <UserCard user={userData} /> : <div>Rendering Error</div>}
-                </div>
-            </>
-        )
-    
+            <div className="profile">
+                {userData !== null ? <UserCard user={userData} /> : <div>Rendering Error</div>}
+            </div>
+        </>
+    )
+
+    const loadingContent = <div className='loading'>Loading...</div>;
+    const errorContent = <div className='error'>{errorMsg}</div>
+
 
     useEffect(() => {
         fetchGithubUserData();
     }, [])
     return (
-        <Rendering data={data} renderingComponent={renderingContent} className={"github-profile-container"} />
+        <Rendering data={data} renderingComponent={loading ? loadingContent : errorMsg ? errorContent : renderingContent} className={"github-profile-container"} />
     )
 }
